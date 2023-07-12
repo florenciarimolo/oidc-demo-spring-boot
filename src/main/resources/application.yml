@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: XXXXXXXXXX
+            client-secret: XXXXXXXXX
+            authorization-grant-type: authorization_code
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            scope: openid, profile
+            provider: google
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
